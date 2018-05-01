@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>listIndex</title>
+</head>
+<body>
+<h1>Welcome to the todo list manager</h1>
+<p>Here you can see all existing tasks</p>
+<lu>
+    {% for task in tasks %}
+       <form action="{{ url_for('delete') }}" method="post">
+    <li>{{ task }} <a href="{{ url_for('delete') }}">Delete</a></li>
+      </form>
+    {% endfor %}
+</lu>
+<br>
+<form action="{{ url_for('task') }}" method="post">
+    <p>Insert new task:
+        <input type="text" name="taskname"/>
+        <input type="submit" class="btn" value="Insert"/>
+    </p>
+</form>
+</body>
+</html>

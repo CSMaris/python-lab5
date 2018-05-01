@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>delete_page</title>
+</head>
+<body>
+<form action="{{ url_for('delete') }}" method="post">
+    <p>Insert id of the task to be deleted:
+        <input type="text" name="taskname"/>
+        <input type="submit" class="btn" value="Delete"/>
+    </p>
+</form>
+
+</body>
+</html>
